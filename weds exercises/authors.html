@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>PENty of Fish</title>
+    <link rel="stylesheet" href="authcss.css">
+</head>
+<body>
+    <h1>The Dating Site for Dead Authors</h1>
+<div class="container">
+    <div id="profilepics">
+        <script id="profileScr" type="text/handlebars">
+            {{#authors}}
+                <div class="profilepic">
+                    <img id="{{@index}}" src="{{photo}}" height='200' width='200'>
+                </div>
+                <div class="text">
+                    <div id="{{born}}text">{{name}}</div>
+                </div>
+            {{/authors}}
+        </script>
+    </div>
+    <div class="modal">
+        <div class="modalContent">
+            <script id="profileDetails" type="text/handlebars">
+                    <p>{{name}} was born in {{born}} and passed {{died}}.</p>
+                    <p>His selected works include {{#each selectedWritings}}
+                                                    {{#if @last}} and {{this}}
+                                                    {{else}} {{this}},  {{/if}}{{/each}}</p>
+                    <p>"{{quote}}"</p>
+            </script>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="authors.js"></script>
+</body>
+</html>
