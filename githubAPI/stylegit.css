@@ -1,0 +1,34 @@
+.container {
+}
+
+.dropdown {
+
+}
+
+img {
+    height: 200px;
+    width: 200px;
+}
+.text {
+    width: 100px;
+    display:inline-block;
+    vertical-align: top;
+    margin-top: 90px;
+    margin-left: 20px;
+    color: black;
+}
+
+.avatar {
+    height: 200px;
+    width: 200px;
+    display:inline-block;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+
+.profilepics {
+    width: 500px;
+    height: 100%;
+    display:inline-block;
+}

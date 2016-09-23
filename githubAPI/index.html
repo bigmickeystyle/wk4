@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Github API</title>
+    <link rel="stylesheet" href="stylegit.css">
+</head>
+<body>
+    <h1>Github API</h1>
+    <input id="user" placeholder="user"></input>
+    <button id="submit">submit</button>
+<div class="container">
+    <div class="profilepics">
+        <script id="avatars" type="text/handlebars">
+
+                <div class="avatar" id="{{name}}"><img {{#owner}}src="{{avatar_url}}"></div>{{/owner}}
+
+                <div class="text">{{full_name}}</div>
+        </script>
+        <script id="dropdown" type="text/handlebars">
+            <div class="dropdown">{{index}}. {{# data.commit}}{{message}}{{/ data.commit}}</div>
+        </script>
+        <script id="nomatches" type="text/handlebars">
+            <div class="dropdown">No matches</div>
+        </script>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+<script src="jsgit.js"></script>
+</body>
+</html>

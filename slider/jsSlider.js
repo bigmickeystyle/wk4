@@ -51,14 +51,6 @@ $('#arrow').on('mousedown', function(){
     });
 });
 
-$('img').on('dragstart', function(e){
-    e.preventDefault();
-});
-
-$('#bar').on('mouseover', function(){
-    $(this).css({cursor: "pointer"});
-});
-
 // $('#bar').on('touchenter', function(e){
 //     e.preventDefault();
 //     $(document).on('touchmove.remmove', function(e){
